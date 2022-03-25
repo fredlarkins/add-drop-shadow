@@ -1,0 +1,12 @@
+Files:
+    ☐ Integrate pathlib for x-platform use
+    ☐ dump the resulting files in another 'ds' folder?
+    ☐ Loop through all files using the same browser object?
+
+Images:
+    ☐ Use PIL to resize them before sending to drop shadow generator?
+    ☐ Add a bit of metadata saying that the file has been optimised
+
+Rsync:
+    ☐ Figure out how to get the Raspberry Pi and Cloud Instance talking (`ssh-keygen`?)
+        - https://adamtheautomator.com/add-ssh-key-to-vs-code/ -- this is how I did it for VSCode, assume the principles are the same
