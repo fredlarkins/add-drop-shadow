@@ -10,3 +10,6 @@ Images:
 Rsync:
     ☐ Figure out how to get the Raspberry Pi and Cloud Instance talking (`ssh-keygen`?)
         - https://adamtheautomator.com/add-ssh-key-to-vs-code/ -- this is how I did it for VSCode, assume the principles are the same
+
+Check out this dotfiles repo:
+    https://github.com/mathiasbynens/dotfiles
