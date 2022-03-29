@@ -1,0 +1,1 @@
+This is where the modified files (i.e. resized with drop-shadow added) go.
