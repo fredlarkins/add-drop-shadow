@@ -3,6 +3,10 @@ images-to-modify/*
 modified/*
 webp-images/*
 
+# Exceptions
+!*/*.md
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
