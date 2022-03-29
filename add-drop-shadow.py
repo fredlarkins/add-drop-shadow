@@ -216,7 +216,7 @@ def main(image:Path):
 
     
 for image in Path('images-to-modify').iterdir():
-    if '__COMPLETED' in image.stem:
+    if '__COMPLETED' in image.stem or image.suffix == '.md':
         continue
     else:
         main(image)
