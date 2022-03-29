@@ -1,0 +1,1 @@
+This is where the final output will go: our resized images w/ drop shadow added in the next-gen webp format.
