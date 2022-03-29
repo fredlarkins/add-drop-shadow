@@ -1,3 +1,8 @@
+# Ignoring files in the output folders
+images-to-modify/*
+modified/*
+webp-images/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
