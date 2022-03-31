@@ -1,17 +1,15 @@
 
 
-from email.mime import image
-import shutil
-from PIL import Image
-#import exif
+import sys
 from pathlib import Path
+
 import requests
+from PIL import Image
 from selenium.webdriver import Firefox
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-import sys
 
 
 def resize(image_fp:Path):
@@ -34,20 +32,6 @@ def resize(image_fp:Path):
         
         # saving to the modified file path
         img.save(fp = modified_fp)
-        
-        # # adding metadata to the image to signal that it has been resized
-        # with open(modified_fp, 'rb') as i:
-            
-        #     # instantating the exif.Image() object
-        #     ex = exif.Image(i)
-            
-        #     # setting the 'image description' exif attribute to 'resized'
-        #     ex.image_description = 'Resized by Python'
-        
-        # with open(modified_fp, 'wb') as i:
-            
-        #     # writing it back to the file object we created above, i
-        #     i.write(ex.get_file())
     
     else:
         # we haven't done anything to the image, we're just going to save it into the modified folder
@@ -55,7 +39,6 @@ def resize(image_fp:Path):
         img.save(modified_fp)
     
     return modified_fp
-
 
 
 def convert_to_webp(source:Path):
@@ -68,8 +51,6 @@ def convert_to_webp(source:Path):
     image = Image.open(source)  # Open image
     image.save(destination, format="webp")  # Convert image to webp
     print('\tSuccess!')
-
-
 
 
 def add_drop_shadow(modified_image_fp:Path):
