@@ -11,6 +11,11 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
+if Path('in-progress').exists():
+    sys.exit('Programme is already running.')
+
+with open('in-progress', 'w') as f:
+    pass
 
 def resize(image_fp:Path):
     with Image.open(image_fp) as img:
@@ -201,3 +206,5 @@ for image in Path('images-to-modify').iterdir():
         continue
     else:
         main(image)
+
+Path('in-progress').unlink()
