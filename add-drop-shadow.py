@@ -11,9 +11,11 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
+# checking that another procees isn't already in progress
 if Path('in-progress').exists():
     sys.exit('Programme is already running.')
 
+# signalling that THIS process is in progress
 with open('in-progress', 'w') as f:
     pass
 
