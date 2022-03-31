@@ -3,7 +3,7 @@
 from email.mime import image
 import shutil
 from PIL import Image
-import exif
+#import exif
 from pathlib import Path
 import requests
 from selenium.webdriver import Firefox
@@ -35,19 +35,19 @@ def resize(image_fp:Path):
         # saving to the modified file path
         img.save(fp = modified_fp)
         
-        # adding metadata to the image to signal that it has been resized
-        with open(modified_fp, 'rb') as i:
+        # # adding metadata to the image to signal that it has been resized
+        # with open(modified_fp, 'rb') as i:
             
-            # instantating the exif.Image() object
-            ex = exif.Image(i)
+        #     # instantating the exif.Image() object
+        #     ex = exif.Image(i)
             
-            # setting the 'image description' exif attribute to 'resized'
-            ex.image_description = 'Resized by Python'
+        #     # setting the 'image description' exif attribute to 'resized'
+        #     ex.image_description = 'Resized by Python'
         
-        with open(modified_fp, 'wb') as i:
+        # with open(modified_fp, 'wb') as i:
             
-            # writing it back to the file object we created above, i
-            i.write(ex.get_file())
+        #     # writing it back to the file object we created above, i
+        #     i.write(ex.get_file())
     
     else:
         # we haven't done anything to the image, we're just going to save it into the modified folder
